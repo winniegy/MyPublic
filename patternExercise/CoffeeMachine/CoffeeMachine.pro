@@ -8,6 +8,6 @@ SOURCES += main.cpp
 HEADERS += \
     beverage.h \
     espresso.h \
-    beveragedecorator.h \
     milk.h \
-    sugar.h
+    sugar.h \
+    condimentDecorator.h

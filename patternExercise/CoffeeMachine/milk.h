@@ -1,12 +1,12 @@
 #ifndef MILK_H
 #define MILK_H
-#include "beveragedecorator.h"
+#include "condimentDecorator.h"
 
-class milk : public beverageDecorator
+class milk : public condimentDecorator
 {
 public:
     milk(){}
-    milk(beverage* p_b) : beverageDecorator(p_b) {}
+    milk(beverage* p_b) : condimentDecorator(p_b) {}
     std::string name()
     {
         return b->name() + ", milk";
