@@ -10,4 +10,4 @@ HEADERS += \
     espresso.h \
     milk.h \
     sugar.h \
-    condimentDecorator.h
+    CondimentDecorator.h

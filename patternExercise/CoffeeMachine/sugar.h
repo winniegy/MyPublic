@@ -1,7 +1,7 @@
 #ifndef SUGAR_H
 #define SUGAR_H
 
-#include "condimentDecorator.h"
+#include "CondimentDecorator.h"
 
 class sugar : public condimentDecorator
 {
