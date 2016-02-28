@@ -5,7 +5,7 @@
 #include "sugar.h"
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(void)
 {
     cout << "Hello Coffee Machine!" << endl;
 
@@ -17,7 +17,10 @@ int main(int argc, char *argv[])
     cout << d->name() << endl;
     cout << d->price() << endl;
 
-    delete a, b, c, d;
+    delete a;
+    delete b;
+    delete c;
+    delete d;
 
     return 0;
 }

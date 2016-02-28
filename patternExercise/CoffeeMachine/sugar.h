@@ -1,13 +1,13 @@
 #ifndef SUGAR_H
 #define SUGAR_H
 
-#include "beveragedecorator.h"
+#include "condimentDecorator.h"
 
-class sugar : public beverageDecorator
+class sugar : public condimentDecorator
 {
 public:
     sugar(){}
-    sugar(beverage* p_b) : beverageDecorator(p_b) {}
+    sugar(beverage* p_b) : condimentDecorator(p_b) {}
     std::string name()
     {
         return b->name() + ", sugar";
