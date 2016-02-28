@@ -1,6 +1,6 @@
 #ifndef MILK_H
 #define MILK_H
-#include "condimentDecorator.h"
+#include "CondimentDecorator.h"
 
 class milk : public condimentDecorator
 {
