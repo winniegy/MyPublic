@@ -4,92 +4,67 @@
 
 using namespace std;
 
-class A
+class E
 {
 public:
-    explicit A(const string name) :
-        name(name)
+    E()
     {
-        cout << this << " single argument constructor called. Name: " << this->name << endl;
+        cout << this << " default constructor called." << endl;
     }
 
-    A(const A& rhs) :
-        name(rhs.name)
+    E(const E& rhs)
     {
-        cout << this << " copy constructor called. Name: " << this->name << endl;
+        cout << this << " copy constructor called." << endl;
     }
 
-    ~A()
+    ~E()
     {
-        cout << this << " default destructor called. Name: " << this->name << endl;
+        cout << this << " default destructor called." << endl;
     }
 
-    A& operator=(const A& rhs)
+    E& operator=(const E& rhs)
     {
-        name = rhs.name;
-        cout << this << " operator assignment called. Name: " << this->name << endl;
+        cout << this << " operator assignment called." << endl;
         return *this;
     }
-
 
     /*
     //C++ 11
-    A(A&& rhs) :
-        name(std::move(rhs.name))
+    E(E&& rhs)
     {
-        cout << this << " moving copy constructor called. Name: " << this->name << endl;
+        cout << this << " moving copy constructor called." << endl;
     }
 
-    A& operator=(A&& rhs)
+    E& operator=(E&& rhs)
     {
-        name = std::move(rhs.name);
-        cout << this << " moving operator assignment called. Name: " << this->name << endl;
+        cout << this << " moving operator assignment called" << endl;
         return *this;
     }
     */
-
-
-    const string getName()
-    {
-        return this->name;
-    }
-
-private:
-    A(){cout << "A default constructor called." << endl;}
-
-    string name;
 };
 
-A f(A a)
+E f(E e)
 {
     cout << "f function called" << endl;
-    return a;
+    return e;
 }
 
 int main()
 {
+    E e1;
+    cout << "=========" << endl;
+    E e2(e1);
+    cout << "=========" << endl;
+    E e3 = e1;
+    cout << "=========" << endl;
+    E e4;
+    e4 = e1;
 
-    A a1("a1");
-    A a2("a2");
     cout << "=========" << endl;
-    A a11(a1);
+    E e5(f(E()));
     cout << "=========" << endl;
-    a1 = a11;
+    e1 = E();
     cout << "=========" << endl;
-    A a22 = a2;
-
-    /*
-    // different?
-    cout << "=========" << endl;
-    A a3(A("temp A1"));
-    cout << "=========" << endl;
-    A a4(f(A("temp A1")));
-    cout << "=========" << endl;
-    a1 = A("temp A2");
-    cout << "=========" << endl;
-    a2 = f(A("temp A3"));
-    cout << "=========" << endl;
-    */
 
     return 0;
 }
