@@ -32,7 +32,7 @@ public:
     }
 
 
-    /*
+
     //C++ 11
     A(A&& rhs) :
         name(std::move(rhs.name))
@@ -46,7 +46,7 @@ public:
         cout << this << " moving operator assignment called. Name: " << this->name << endl;
         return *this;
     }
-    */
+
 
 
     const string getName()

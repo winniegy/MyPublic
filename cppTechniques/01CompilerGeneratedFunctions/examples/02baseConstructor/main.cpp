@@ -9,7 +9,7 @@ public:
     A() :
         mInt(0),
         mStr("A"),
-        mOther(NULL) // or 0, nullptr for C++
+        mOther(nullptr) // or NULL, or 0, nullptr for C++ 11
     {
         mVec.reserve(5);  //reserve 5 element of int for mVec
         cout << mVec.capacity() << endl;

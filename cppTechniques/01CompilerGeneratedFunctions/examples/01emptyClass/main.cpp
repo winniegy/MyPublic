@@ -28,7 +28,7 @@ public:
         return *this;
     }
 
-    /*
+
     //C++ 11
     E(E&& rhs)
     {
@@ -40,7 +40,7 @@ public:
         cout << this << " moving operator assignment called" << endl;
         return *this;
     }
-    */
+
 };
 
 E f(E e)

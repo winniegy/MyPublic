@@ -25,11 +25,10 @@ public:
     }
 
     ~Operation() {
-        cout << "destructor constructor called." << endl;
+        cout << "destructor called." << endl;
         delete pSecret;
     }
 
-    /*
     // version 1
     Operation& operator=(const Operation& rhs) {
         cout << "assignment operator called." << endl;
@@ -39,7 +38,6 @@ public:
         cout << "new secret: " << *pSecret << endl;
         return *this;
     }
-    */
 
     /*
     // version 2, identity test
@@ -75,7 +73,7 @@ public:
     }
     */
 
-
+    /*
     //version 4: Copy-swap idiom
     friend void swap(Operation& lhs, Operation& rhs)
     {
@@ -92,6 +90,7 @@ public:
 
         return *this;
     }
+    */
 
     //move constructor C++ 11
     /*
@@ -99,10 +98,12 @@ public:
         cout << "move constructor called." << endl;
         swap(*this, rhs);
     }
-    */
-    Operation(Operation&& rhs) : pSecret(std::move(rhs.pSecret)) {
 
+    Operation(Operation&& rhs) : pSecret(std::move(rhs.pSecret)) {
+        cout << "move constructor with std::move called." << endl;
     }
+    */
+
 };
 
 
